@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chez Augustine — Restaurant bistronomique à Lyon</title>
+<meta name="description" content="Chez Augustine, restaurant bistronomique au cœur de Lyon. Cuisine de saison, produits locaux, cadre chaleureux. Réservez votre table.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#accueil" class="skip-link">Aller au contenu</a>
+
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="#accueil" class="logo">Chez <span>Augustine</span></a>
+
+    <nav class="nav" id="nav">
+      <a href="#accueil" class="nav__link active">Accueil</a>
+      <a href="#apropos" class="nav__link">À propos</a>
+      <a href="#menu" class="nav__link">Menu</a>
+      <a href="#galerie" class="nav__link">Galerie</a>
+      <a href="#avis" class="nav__link">Avis</a>
+      <a href="#contact" class="nav__link">Contact</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--primary btn--small">Réserver une table</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="accueil">
+    <div class="hero__bg" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1920&auto=format&fit=crop')"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content container">
+      <p class="eyebrow reveal">Cuisine de saison · Produits locaux</p>
+      <h1 class="reveal">Une table chaleureuse<br>au cœur de Lyon</h1>
+      <p class="hero__text reveal">Chez Augustine, chaque plat raconte une histoire : celle de producteurs
+        locaux, d'une cuisine simple et sincère, et d'un moment partagé autour de la table.</p>
+      <div class="hero__actions reveal">
+        <a href="#contact" class="btn btn--primary">Réserver une table</a>
+        <a href="#menu" class="btn btn--ghost">Découvrir le menu</a>
+      </div>
+    </div>
+    <a href="#apropos" class="scroll-cue" aria-label="Défiler vers le bas">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- A PROPOS -->
+  <section class="about" id="apropos">
+    <div class="container about__inner">
+      <div class="about__media reveal">
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=1200&auto=format&fit=crop" alt="Le chef en cuisine, dressant un plat avec précision">
+        <div class="about__badge">
+          <strong>12</strong>
+          <span>ans d'expérience</span>
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="eyebrow reveal">Notre histoire</p>
+        <h2 class="reveal">Une cuisine sincère, pensée comme à la maison</h2>
+        <p class="reveal">Ouvert en 2014 par le chef Julien Berthier dans une ancienne bouchonnerie du
+          quartier Saint-Jean, le restaurant porte le nom de sa grand-mère Augustine, qui lui a transmis le
+          goût d'une cuisine simple et sincère : bien manger commence par bien choisir ses produits.</p>
+        <p class="reveal">Le marché des Halles de Lyon et une poignée de producteurs de la région fournissent
+          une carte qui change au fil des saisons. Rien n'est figé, tout est frais.</p>
+        <ul class="about__points reveal">
+          <li>Produits locaux et de saison</li>
+          <li>Carte renouvelée chaque mois</li>
+          <li>Options végétariennes à chaque service</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <p class="eyebrow reveal center">La carte</p>
+      <h2 class="reveal center">Notre menu</h2>
+      <p class="section-intro reveal center">Une sélection qui évolue avec les saisons. Voici un aperçu de
+        notre carte actuelle.</p>
+
+      <div class="menu-tabs reveal" role="tablist">
+        <button class="menu-tab active" data-tab="entrees" role="tab" aria-selected="true">Entrées</button>
+        <button class="menu-tab" data-tab="plats" role="tab" aria-selected="false">Plats</button>
+        <button class="menu-tab" data-tab="desserts" role="tab" aria-selected="false">Desserts</button>
+        <button class="menu-tab" data-tab="boissons" role="tab" aria-selected="false">Boissons</button>
+      </div>
+
+      <div class="menu-panel active" data-panel="entrees">
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Velouté de potimarron</h3><span class="dots"></span><span class="price">9 €</span></div>
+          <p>Noisettes torréfiées, huile de courge, crème d'agrumes</p>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Burrata de Bufflonne</h3><span class="dots"></span><span class="price">13 €</span></div>
+          <p>Tomates anciennes, pesto de roquette, pain grillé</p>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Tartare de saumon</h3><span class="dots"></span><span class="price">14 €</span></div>
+          <p>Avocat, citron vert, coriandre, chips de riz</p>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="plats">
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Joue de bœuf braisée</h3><span class="dots"></span><span class="price">24 €</span></div>
+          <p>Purée de pommes de terre à l'huile d'olive, carottes fondantes</p>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Suprême de volaille fermière</h3><span class="dots"></span><span class="price">22 €</span></div>
+          <p>Jus corsé, champignons de saison, écrasé de pommes de terre</p>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Risotto crémeux aux champignons</h3><span class="dots"></span><span class="price">19 €</span></div>
+          <p>Parmesan affiné 24 mois, huile de noisette (végétarien)</p>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="desserts">
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Tarte fine aux pommes</h3><span class="dots"></span><span class="price">9 €</span></div>
+          <p>Caramel au beurre salé, glace vanille bourbon</p>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Moelleux au chocolat</h3><span class="dots"></span><span class="price">10 €</span></div>
+          <p>Cœur coulant, crème anglaise à la fève tonka</p>
+        </div>
+      </div>
+
+      <div class="menu-panel" data-panel="boissons">
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Verre de Côtes-du-Rhône</h3><span class="dots"></span><span class="price">6 €</span></div>
+          <p>Sélection du sommelier, accord mets et vins sur demande</p>
+        </div>
+        <div class="menu-item reveal">
+          <div class="menu-item__head"><h3>Limonade artisanale</h3><span class="dots"></span><span class="price">5 €</span></div>
+          <p>Recette maison, citron et thym frais</p>
+        </div>
+      </div>
+
+      <p class="menu-note reveal center">Menu déjeuner à 19 € (entrée + plat ou plat + dessert), du mardi au vendredi.</p>
+    </div>
+  </section>
+
+  <!-- GALERIE -->
+  <section class="gallery" id="galerie">
+    <div class="container">
+      <p class="eyebrow reveal center">En images</p>
+      <h2 class="reveal center">La salle et l'assiette</h2>
+    </div>
+    <div class="gallery__grid">
+      <button class="gallery__item reveal" data-full="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=700&auto=format&fit=crop" alt="Plat dressé, assiette gastronomique">
+      </button>
+      <button class="gallery__item reveal" data-full="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=700&auto=format&fit=crop" alt="Clients attablés, ambiance chaleureuse du restaurant">
+      </button>
+      <button class="gallery__item reveal" data-full="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=700&auto=format&fit=crop" alt="Pavé de saumon dressé, verre de vin rouge">
+      </button>
+      <button class="gallery__item reveal" data-full="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1424847651672-bf20a4b0982b?q=80&w=700&auto=format&fit=crop" alt="Table conviviale avec plusieurs plats partagés">
+      </button>
+      <button class="gallery__item reveal" data-full="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?q=80&w=700&auto=format&fit=crop" alt="Intérieur cosy du restaurant">
+      </button>
+      <button class="gallery__item reveal" data-full="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=1400&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=700&auto=format&fit=crop" alt="Assiette de poisson grillé et salade">
+      </button>
+    </div>
+  </section>
+
+  <!-- AVIS -->
+  <section class="testimonials" id="avis">
+    <div class="container">
+      <p class="eyebrow reveal center">Ils sont venus</p>
+      <h2 class="reveal center">Ce qu'en disent nos clients</h2>
+
+      <div class="testi-track" id="testiTrack">
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>« Un accueil chaleureux et une cuisine d'une grande finesse. La joue de bœuf est un souvenir
+            impérissable. On y retourne dès que possible. »</p>
+          <div class="testi-author">
+            <span class="testi-avatar">M</span>
+            <div><strong>Marc D.</strong><span>Client depuis 2019</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>« Le rapport qualité-prix du menu déjeuner est excellent. Service attentionné, cadre superbe,
+            parfait pour un déjeuner d'affaires ou entre amis. »</p>
+          <div class="testi-author">
+            <span class="testi-avatar">S</span>
+            <div><strong>Sarah L.</strong><span>Avis Google</span></div>
+          </div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>« Des produits frais, une carte qui change vraiment au fil des saisons, et une équipe passionnée.
+            Une des meilleures adresses du Vieux Lyon. »</p>
+          <div class="testi-author">
+            <span class="testi-avatar">K</span>
+            <div><strong>Karim B.</strong><span>Client régulier</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-dots" id="testiDots"></div>
+    </div>
+  </section>
+
+  <!-- INFOS PRATIQUES -->
+  <section class="practical" id="infos">
+    <div class="container practical__inner">
+      <div class="practical__card reveal">
+        <h3>Horaires</h3>
+        <ul class="hours">
+          <li><span>Lundi</span><span>Fermé</span></li>
+          <li><span>Mardi – Vendredi</span><span>12h–14h · 19h–22h30</span></li>
+          <li><span>Samedi</span><span>19h–23h</span></li>
+          <li><span>Dimanche</span><span>12h–15h</span></li>
+        </ul>
+      </div>
+      <div class="practical__card reveal">
+        <h3>Adresse</h3>
+        <p>14 rue Saint-Jean<br>69005 Lyon, France</p>
+        <p class="practical__meta">À deux pas de la cathédrale Saint-Jean, dans le quartier historique du
+          Vieux Lyon.</p>
+        <a href="tel:+33478000000" class="practical__link">04 78 00 00 00</a>
+      </div>
+      <div class="practical__map reveal">
+        <iframe
+          title="Localisation de Chez Augustine"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=4.826%2C45.762%2C4.834%2C45.768&layer=mapnik&marker=45.765%2C4.830"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact__inner">
+      <div class="contact__text reveal">
+        <p class="eyebrow">Réservation</p>
+        <h2>Réservez votre table</h2>
+        <p>Remplissez le formulaire ci-contre : votre table est confirmée immédiatement selon les
+          disponibilités. Pour un groupe de plus de 8 personnes, merci de nous appeler directement.</p>
+      </div>
+
+      <form class="contact__form reveal" id="reservationForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom">
+            <span class="form-error">Merci d'indiquer votre nom.</span>
+          </div>
+          <div class="form-field">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" required placeholder="06 12 34 56 78">
+            <span class="form-error">Merci d'indiquer un numéro pour vous recontacter si besoin.</span>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="vous@exemple.com">
+          <span class="form-error">Merci d'indiquer un e-mail valide.</span>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+            <span class="form-error" id="dateError">Merci de choisir une date où nous sommes ouverts.</span>
+          </div>
+          <div class="form-field">
+            <label for="time">Heure</label>
+            <select id="time" name="time" required>
+              <option value="" selected disabled>Choisissez d'abord une date</option>
+            </select>
+            <span class="form-error">Merci de choisir un créneau disponible.</span>
+          </div>
+          <div class="form-field form-field--small">
+            <label for="guests">Convives</label>
+            <select id="guests" name="guests">
+              <option>1</option><option>2</option><option selected>3</option><option>4</option>
+              <option>5</option><option>6</option><option>7</option><option>8</option>
+            </select>
+          </div>
+        </div>
+        <p class="form-hint" id="hoursHint">Ouvert mar.–ven. 12h–14h &amp; 19h–22h30 · sam. 19h–23h · dim. 12h–15h · fermé le lundi.</p>
+        <div class="form-field">
+          <label for="message">Message (optionnel)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Allergies, occasion particulière..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Réserver ma table</button>
+        <p class="form-success" id="formSuccess" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div>
+      <a href="#accueil" class="logo logo--footer">Chez <span>Augustine</span></a>
+      <p>14 rue Saint-Jean, 69005 Lyon</p>
+    </div>
+    <div class="footer__social">
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2c2.7 0 3.05.01 4.12.06 1.07.05 1.79.22 2.43.46.66.26 1.22.6 1.77 1.15.55.55.89 1.11 1.15 1.77.24.64.41 1.36.46 2.43.05 1.07.06 1.42.06 4.12s-.01 3.05-.06 4.12c-.05 1.07-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.24-1.36.41-2.43.46-1.07.05-1.42.06-4.12.06s-3.05-.01-4.12-.06c-1.07-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.24-.64-.41-1.36-.46-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.05-1.07.22-1.79.46-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.44 2.53c.64-.24 1.36-.41 2.43-.46C8.95 2.01 9.3 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4zm5.2-8.4a1.17 1.17 0 1 1 0-2.34 1.17 1.17 0 0 1 0 2.34z"/></svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M13.5 21v-7.9h2.66l.4-3.09h-3.06V8.1c0-.9.25-1.5 1.55-1.5h1.65V3.9c-.29-.04-1.26-.12-2.4-.12-2.37 0-3.99 1.44-3.99 4.1v2.28H7.65v3.09h2.66V21h3.19z"/></svg>
+      </a>
+    </div>
+    <div class="footer__hours">
+      <h4>Horaires</h4>
+      <p>Mar–Ven 12h–14h · 19h–22h30<br>Sam 19h–23h · Dim 12h–15h</p>
+    </div>
+  </div>
+  <div class="footer__credit container">
+    <p>© 2026 Chez Augustine. Site de démonstration — les informations sont fictives.
+      <a href="admin.html">Espace pro →</a></p>
+    <p>Site conçu par <strong>Bilel Ben Younes</strong> — développeur web freelance.
+      <a href="#" id="portfolioLink">Voir mon portfolio →</a></p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fermer">&times;</button>
+  <img id="lightboxImg" src="" alt="">
+</div>
+
+<script src="reservations.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

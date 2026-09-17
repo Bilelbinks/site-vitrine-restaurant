@@ -1,0 +1,240 @@
+/* ===== Espace pro ===== */
+.admin-body { background: var(--bg-alt); }
+
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background: var(--ink);
+}
+.admin-topbar .logo { color: #fff; font-size: 1.2rem; }
+.admin-topbar__right { display: flex; align-items: center; gap: 16px; }
+.admin-badge {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--gold);
+  border: 1px solid rgba(184,135,58,.4);
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.btn--ghost-dark {
+  border: 1.5px solid var(--line);
+  color: var(--ink);
+  background: transparent;
+}
+.btn--ghost-dark:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.admin-topbar .btn--ghost-dark {
+  border-color: rgba(255,255,255,.3);
+  color: #fff;
+}
+.admin-topbar .btn--ghost-dark:hover { background: rgba(255,255,255,.12); }
+
+/* Login */
+.admin-login {
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+}
+.admin-login__card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 44px;
+  max-width: 420px;
+  width: 100%;
+}
+.admin-login__card h1 { margin-bottom: .4em; }
+.admin-login__card form { margin-top: 1.5em; }
+.admin-login__hint {
+  margin-top: 1.5em;
+  font-size: .8rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  padding-top: 1em;
+}
+.admin-login__hint code {
+  background: var(--bg-alt);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Le composant .form-field est pensé pour le fond sombre de la section contact
+   du site public ; on réajuste les couleurs pour la carte de login (fond clair). */
+.admin-login__card .form-field label { color: var(--ink); }
+.admin-login__card .form-field input {
+  background: #fff;
+  border-color: var(--line);
+  color: var(--ink);
+}
+.admin-login__card .form-field input::placeholder { color: #b6ab9a; }
+.admin-login__card .form-field input:focus { border-color: var(--accent); }
+
+/* Dashboard */
+.admin-dashboard { padding: 40px 0 80px; }
+
+.admin-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.admin-datenav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.admin-datenav input[type="date"] {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  font-family: var(--font-body);
+}
+.admin-navbtn {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background .2s ease;
+}
+.admin-navbtn:hover { background: var(--bg-alt); }
+
+.admin-daystatus {
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.admin-stat {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+}
+.admin-stat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--ink);
+}
+.admin-stat span { font-size: .82rem; color: var(--ink-soft); }
+
+.admin-section-title {
+  font-size: 1.2rem;
+  margin: 0 0 16px;
+}
+
+.admin-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.admin-slot {
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  box-shadow: var(--shadow-sm);
+}
+.admin-slot__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.admin-slot__head strong { font-family: var(--font-display); font-size: 1.05rem; }
+.admin-slot__head span { font-size: .78rem; color: var(--ink-soft); }
+.admin-slot__bar {
+  height: 6px;
+  background: var(--bg-alt);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.admin-slot__bar-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 999px;
+  transition: width .3s ease;
+}
+.admin-slot.is-full .admin-slot__bar-fill { background: var(--accent); }
+.admin-slot.is-full .admin-slot__head span { color: var(--accent); font-weight: 600; }
+
+.admin-empty {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  color: var(--ink-soft);
+}
+
+.admin-list { display: flex; flex-direction: column; gap: 12px; }
+.admin-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  display: grid;
+  grid-template-columns: 90px 1.3fr 1fr 90px auto;
+  gap: 18px;
+  align-items: center;
+}
+.admin-card.is-cancelled { opacity: .55; }
+.admin-card__time { font-family: var(--font-display); font-size: 1.3rem; }
+.admin-card__name { font-weight: 600; }
+.admin-card__meta { font-size: .82rem; color: var(--ink-soft); }
+.admin-card__contact { font-size: .88rem; }
+.admin-card__contact a { color: var(--accent); }
+.admin-card__guests { text-align: center; }
+.admin-card__guests strong { display: block; font-family: var(--font-display); font-size: 1.2rem; }
+.admin-card__guests span { font-size: .72rem; color: var(--ink-soft); text-transform: uppercase; }
+.admin-card__msg {
+  grid-column: 1 / -1;
+  font-size: .85rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  border-top: 1px dashed var(--line);
+  padding-top: 10px;
+}
+.admin-card__actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.admin-card__actions button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-size: .78rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.action-cancel { background: #f6e2d8; color: var(--accent-dark); }
+.action-confirm { background: #e4efe0; color: #3a6b34; }
+.action-delete { background: var(--bg-alt); color: var(--ink-soft); }
+.status-pill {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+.status-pill--ok { background: #e4efe0; color: #3a6b34; }
+.status-pill--cancelled { background: #f1e3e3; color: #9c3d3d; }
+
+@media (max-width: 760px) {
+  .admin-card { grid-template-columns: 1fr 1fr; }
+  .admin-card__actions { grid-column: 1 / -1; }
+  .admin-topbar { padding: 14px 20px; }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Espace pro — Chez Augustine</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-topbar">
+  <a href="index.html" class="logo">Chez <span>Augustine</span></a>
+  <div class="admin-topbar__right">
+    <span class="admin-badge">Espace pro — démo</span>
+    <button class="btn btn--ghost-dark btn--small" id="logoutBtn" hidden>Se déconnecter</button>
+  </div>
+</header>
+
+<!-- LOGIN GATE -->
+<section class="admin-login" id="loginGate">
+  <div class="admin-login__card">
+    <p class="eyebrow">Accès restaurateur</p>
+    <h1>Espace pro</h1>
+    <p>Cette section est réservée à l'équipe du restaurant : suivi des réservations, taux de remplissage
+      par service, coordonnées des clients.</p>
+    <form id="loginForm">
+      <div class="form-field">
+        <label for="password">Mot de passe</label>
+        <input type="password" id="password" name="password" placeholder="•••••••••" autocomplete="off" required>
+        <span class="form-error" id="loginError">Mot de passe incorrect.</span>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">Se connecter</button>
+    </form>
+    <p class="admin-login__hint">Démo : mot de passe <code>admin1234</code>. Dans une vraie mise en
+      production, cet accès serait protégé côté serveur (voir README).</p>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<main class="admin-dashboard" id="dashboard" hidden>
+  <div class="container">
+
+    <div class="admin-toolbar">
+      <div class="admin-datenav">
+        <button class="admin-navbtn" id="prevDay" aria-label="Jour précédent">←</button>
+        <input type="date" id="dashDate">
+        <button class="admin-navbtn" id="nextDay" aria-label="Jour suivant">→</button>
+        <button class="btn btn--ghost-dark btn--small" id="todayBtn">Aujourd'hui</button>
+      </div>
+      <button class="btn btn--ghost-dark btn--small" id="resetDemoBtn">Réinitialiser les données de démo</button>
+    </div>
+
+    <p class="admin-daystatus" id="dayStatus"></p>
+
+    <div class="admin-stats" id="statsRow"></div>
+
+    <h2 class="admin-section-title">Créneaux du jour</h2>
+    <div class="admin-slots" id="slotsGrid"></div>
+
+    <h2 class="admin-section-title">Réservations</h2>
+    <div class="admin-list" id="reservationsList"></div>
+
+  </div>
+</main>
+
+<script src="reservations.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
